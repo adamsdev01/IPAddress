@@ -1,6 +1,9 @@
 # Get Client IP Address
 ### This web app gets the IP Address of Visitors (Client) Machines which don’t use Proxy Servers and also the IP Address if the (Client) Machines are behind Proxy Servers
 
+## Demo Screenshot(s) 
+![screenshot](https://github.com/adamsdev01/IPAddress/blob/main/Screenshot%202025-01-06%20201741.png)
+
 ## :bulb:	Definitions 
   - IP - Internet Protocol
   - IP Address - A unique numerical label assigned to a device
