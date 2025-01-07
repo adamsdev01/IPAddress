@@ -2,3 +2,26 @@
 
 <PageTitle>Index</PageTitle>
 
+<h3 style="text-align:center;">My IP Address is: <b style="color:red;">@IPAddress</b></h3>
+<h6>Running locally.</h6>
+
+@code {
+
+    public string IPAddress { get; set; }
+
+    protected override void OnInitialized()
+    {
+        var httpContext = HttpContextAccessor.HttpContext;
+        IPAddress = httpContext.Connection.RemoteIpAddress.ToString();
+    }
+
+    public void GetIPAddress()
+    {
+        string IPAddress = HttpContextAccessor.HttpContext.Request.Headers["HTTP_X_FORWARDED_FOR"];
+
+        if (string.IsNullOrEmpty(IPAddress))
+        {
+            IPAddress = HttpContextAccessor.HttpContext.Connection.RemoteIpAddress.ToString();
+        }
+    }
+}
